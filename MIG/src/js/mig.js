@@ -8,14 +8,16 @@ var OPTIONS_ITEMS = {
 		, "Zargabad"
 		, "Kunduz"
 		, "Shapur"
-		, "Proving Grounds"	
+		, "Proving Grounds"
+		, "Sahrani"
+		, "Isla Abramia"
+		, "Isla Duala"
+		, "Everon/Malden/Nogova"
 	]
 	, "factions": [
-		"NATO Army"
-		,"NATO Peacekeeprs"		
+		"NATO Army / Peacekeeprs"		
 		,"NATO Special Forces"		
-		,"RuAF Army"
-		,"RuAF Peacekeeprs"
+		,"RuAF Army / Peacekeeprs"
 		,"RuAF Special Forces"		
 		,"Insurgents"
 		,"Local Armed Forces"
@@ -39,7 +41,7 @@ var OPTIONS_ITEMS = {
 		, "Rescue MVP"
 		, "Escort MVP"
 		
-		, "Retrieve Intel"		
+		, "Retrieve Intel"
 	]	
 };
 
