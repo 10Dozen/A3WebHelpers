@@ -65,7 +65,7 @@ var Specification = function () {
 	};
 	this.get = function () {
 		this.name = $( ".fnc-name" ).val();
-		this.expression = $( ".fnc-expression" ).val();
+		this.expression = $( ".fnc-expression" ).val() + " " + this.name;
 		this.output = $( ".fnc-output" ).val();
 		this.description = $( ".fnc-desc" ).val();
 		this.examples = $( ".fnc-examples" ).val();
