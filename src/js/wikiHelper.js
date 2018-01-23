@@ -1,4 +1,8 @@
+/*
+	add examples to Wiki output
 
+
+*/
 /*		
  *	COMMON FUNCTIONS
 */ 
@@ -49,7 +53,7 @@ var Specification = function () {
 	this.$form = $(".fnc-item");
 	this.init = function () {
 		$( ".inputs-btn" ).on('click', function () {
-			Spec.addInput();
+			Spec.addInput( $(this).attr("isOptional") == 'true' );
 		});
 	};	
 	
@@ -78,18 +82,19 @@ var Specification = function () {
 		}		
 	};
 	
-	this.addInput = function () {
+	this.addInput = function (isOptional) {
 		var id = (this.inputs).length;
 		
 		$( ".inputs-list" ).append( "<div class='inputs-" + id + "' iid='" + id + "'><li><span class='inputs-number'>" + id + "</span><span class='inputs-remove'>✘</span>"
 			+ "<div class='dl-2'><input class='input-type' placeholder='Type (e.g. STRING)'></input></div>"
-			+ "</li><li><div class='dl-2'><textarea class='input-desc' cols='35' rows='3' placeholder='Description'></textarea></div></li></div>"
+			+ "</li><li><div class='dl-2'>"
+			+ "<textarea class='input-desc' cols='35' rows='3' placeholder='Description' >"
+			+ (isOptional ? "(optional) . Default: " : "")
+			+ "</textarea></div></li></div>"
 		);
 		
 		$(".inputs-list").find(".inputs-" + id).find('.inputs-remove').on('click', function () {
-			console.log(123);
 			var $item = $(this).parent().parent();
-			console.log($item);
 			var id = $( $item ).attr("iid");
 			
 			$($item).remove();
@@ -123,14 +128,26 @@ var Specification = function () {
 			
 			inputText += "<br />&lt;br /&gt;`" + i + ": "+ inputData.type + "	- " + inputDesc + "`";
 		};
+
+		var examples = "";
+        var examplesLines = Spec.examples.split("\n");
+        for (var i=0; i< examplesLines.length; i++) {
+        	examples += "<br />      " +  examplesLines[i];
+        };
 		
 		var codeBlocks = [
-			"##### " + Spec.name
+			"***"
+			,""
+			,"#### " + Spec.name
 			, "`" + Spec.expression + "`"
 			, "&lt;br /&gt;&lt;br /&gt;`INPUT:`" + inputText
 			, "&lt;br /&gt;`OUTPUT: " + Spec.output + "`"
 			, "&lt;br /&gt;&lt;br /&gt;" + Spec.description.replace(/(\r\n|\n|\r)/g," ")
+			, "&lt;br /&gt;&lt;br /&gt;`EXAMPLES:`"
+			, "&lt;br /&gt;"
+			, examples
 		];
+
 		var output = "";
 		for (var i=0; i<codeBlocks.length; i++) {
 			output += "<br />" + codeBlocks[i];
@@ -138,6 +155,7 @@ var Specification = function () {
 	
 		return output;
 	};
+
 	this.getSqfCode = function () {
 		Spec.get();
 		

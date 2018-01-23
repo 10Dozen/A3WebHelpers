@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<title>Arma 3 Helpers</title>
 		
-		<link rel="stylesheet" href="src/css/mig.css">
+		<link rel="stylesheet" href="src/css/index.css">
 		<style>
 			.btn {
 				padding: 15px 20px;
@@ -21,30 +21,7 @@
 
 		</style>
 		<script src="src/js/jquery.min.js"></script>
-		<script>
-			var Helpers = [
-				["Wiki Helper"					, "A3WikiHelper/A3WikiHelper.html"]
-				,["tSF Briefing Helper"			, "tSFBriefingHelper/tSF_Briefing_Helper.html"]
-				,["tSF Endings Helper"			, "tSFEndingsHelper/tSF_Mission_Endings_Helper.html"]
-				,["DynAI Helper"				, "DynaiHelper/DynAI-Helper.html"]
-				,["Mission Idea Generator"		, "MIG/tSF_MIG.html"]
-			];
-
-			function openPage(page) {
-				window.open(page,"_self");
-			};
-
-			$( document ).ready(function () {
-
-				for (var i = 0; i < Helpers.length; i++) {
-					$('#helper-list').append(
-						"<li><div class='btn' onClick='openPage(\"" + Helpers[i][1] + "\")'>" + Helpers[i][0]
-						+ "</div></li>"
-					)
-				}
-			});
-		</script>
-		<script src="src/js/mig.js"></script>
+		<script src="src/js/index.js"></script>
 	</head>
 	<body>
 		<div id="header">
