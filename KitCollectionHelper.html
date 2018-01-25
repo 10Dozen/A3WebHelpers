@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="us">
+<head>
+    <meta charset="utf-8">
+    <title>dzn_gear Collection Helper</title>
+
+    <link rel="stylesheet" href="src/css/wikiHelper.css">
+    <script src="src/js/jquery.min.js"></script>
+    <script src="src/js/kitCollectionHelper.js"></script>
+</head>
+<body>
+
+
+<div id="header">
+    <div id="header-title">
+        <span>dzn_gear</span> Collection Helper
+    </div>
+    <div id="header-status">
+        <button class="btn-get-wiki">Get Wiki text</button>
+        <button class="btn-clear">Clear</button>
+
+    </div>
+</div>
+
+<div id="items-form">
+    <ul class="fnc-item">
+        <li>
+            <div class='dl-1'>Folder name</div>
+            <div class='dl-2'>
+                <input class='folder-name-input' placeholder=''></input>
+            </div>
+        </li>
+        <li>
+            <div class='dl-1'>Side</div>
+            <div class='dl-2'>
+                <select id="side-options"></select>
+                <input class='side-input' placeholder=''></input>
+            </div>
+        </li>
+        <li>
+            <div class='dl-1'>Doctrine</div>
+            <div class='dl-2'>
+                <select id="doctrine-options"></select>
+                <input type="text" class='doctrine-input' placeholder=''></input>
+            </div>
+        </li>
+        <hr />
+        <li>
+            <div class='dl-1'>Mods</div>
+            <div class='dl-2'>
+                <select id="mods-options"></select>
+                <br /><textarea class='mods-input' placeholder='' cols='65' rows='5'></textarea>
+            </div>
+        </li>
+
+        <li>
+            <div class='dl-1'>Notes</div>
+            <div class='dl-2'>
+                <select id="notes-options"></select>
+                <br /><textarea class='notes-input' placeholder='' cols='65' rows='5'></textarea>
+            </div>
+        </li>
+        <hr />
+        <li>
+            <div class='dl-1'>Revision</div>
+            <div class='dl-2'>
+                <input class='revision-input' placeholder=''></input>
+            </div>
+        </li>
+        <hr />
+        <li>
+            <div class='dl-1'>Image name or URL</div>
+            <div class='dl-2'>
+                <input class='image-name-input' placeholder='Name'></input>
+                <input class='image-url-input' placeholder='URL'></input>
+            </div>
+        </li>
+        <li>
+            <div class='dl-1'>File name or URL</div>
+            <div class='dl-2'>
+                <input class='file-name-input' placeholder='Name'></input>
+                <input class='file-url-input' placeholder='URL'></input>
+            </div>
+        </li>
+    </ul>
+</div>
+
+<div id="result-tab">
+    <div id="result-tab-header"><b>SQF Code</b> <span onClick="closeCodeDisplay()">Close</span></div>
+    <div id="result-tab-data"></div>
+</div>
+</body>
+</html>

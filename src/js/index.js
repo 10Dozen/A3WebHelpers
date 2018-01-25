@@ -4,6 +4,7 @@ var Helpers = [
 	,["tSF Endings Helper"			, "tSF_Mission_Endings_Helper.html"]
 	,["DynAI Helper"				, "DynAI-Helper.html"]
 	,["Mission Idea Generator"		, "tSF_MIG.html"]
+	,["Kit Collection Helper"		, "KitCollectionHelper.html" ]
 ];
 
 function openPage(page) {
