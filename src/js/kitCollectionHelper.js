@@ -1,7 +1,7 @@
 SideOption = [
 	""
-	, "WEST"
-	, "EAST"
+	, "West"
+	, "East"
 	, "Irregulars"
 	, "Civilians"
 ];
